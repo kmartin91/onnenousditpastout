@@ -60,7 +60,7 @@ module.exports = {
         name: `On ne nous dit pas tout`,
         short_name: `ONDPT`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#090`,
         theme_color: `#333`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
