@@ -14,26 +14,28 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle} posts={posts}>
         <SEO title="All posts" />
         <table>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <tr key={node.fields.slug}>
-                <td>
-                  <h3>
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </td>
-              </tr>
-            )
-          })}
+          <tbody>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <tr key={node.fields.slug}>
+                  <td>
+                    <h3>
+                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
         </table>
       </Layout>
     )

@@ -81,12 +81,14 @@ class Layout extends React.Component {
                 width: "300px",
               }}
             >
-              <img
-                src={Logo}
-                width="300px"
-                alt="Oups je crois qu'on a un problème d'avatar, surement la CIA qui a bloqué notre avatar, de peur de perdre tous leurs secrets les plus ultimes. Ne soyez plus des moutons, libérez votre conscience !"
-                title="Pourquoi mettez-vous la souris sur le logo ? Surement parce qu'on vous a appris à le faire, mais dans quel but vous a-t-on lavé le cerveau comme ceci? Posez-vous les bonnes questions!"
-              />
+              <Link to={`/`}>
+                <img
+                  src={Logo}
+                  width="300px"
+                  alt="Oups je crois qu'on a un problème d'avatar, surement la CIA qui a bloqué notre avatar, de peur de perdre tous leurs secrets les plus ultimes. Ne soyez plus des moutons, libérez votre conscience !"
+                  title="Pourquoi mettez-vous la souris sur le logo ? Surement parce qu'on vous a appris à le faire, mais dans quel but vous a-t-on lavé le cerveau comme ceci? Posez-vous les bonnes questions!"
+                />
+              </Link>
             </th>
             <th style={{ padding: "0 0 0 16px", verticalAlign: "middle" }}>
               <h1 style={{ fontFamily: "Comic Sans Ms", fontStyle: "italic" }}>
@@ -146,11 +148,15 @@ class Layout extends React.Component {
             </td>
           </tr>
         </tbody>
-        <footer>
-          © Nous sommes en{" "}
-          {new Date().getFullYear() *
-            Math.floor(Math.random() * Math.floor("2000"))}
-        </footer>
+        <tfoot>
+          <tr>
+            <td>
+              © Nous sommes en{" "}
+              {new Date().getFullYear() *
+                Math.floor(Math.random() * Math.floor("2000"))}
+            </td>
+          </tr>
+        </tfoot>
       </table>
     )
   }
