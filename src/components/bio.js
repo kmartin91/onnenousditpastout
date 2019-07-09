@@ -54,8 +54,8 @@ const Bio = () => {
         }}
       />
       <p>
-        Nous sommes les<strong>{author}</strong>. Vous êtes sur le site où toute
-        la vérité converge.
+        Nous sommes <strong>{author}</strong>. Vous êtes sur le site où toute la
+        vérité converge.
         {` `}
       </p>
     </div>
